@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row main-box">
+
+        <!-- Form -->
+        <div class="col-md-6">
+
+            <div class="mb-3">
+                <input type="text" id="name" class="form-control" placeholder="Enter Name">
+            </div>
+
+            <div class="mb-3">
+                <input type="email" id="email" class="form-control" placeholder="Enter Email">
+            </div>
+
+            <div class="mb-3">
+                <input type="date" id="dob" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <select id="course" class="form-select">
+                    <option>Undergraduate</option>
+                    <option>Postgraduate</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <select id="branch" class="form-select">
+                    <option>B.Tech. Mech</option>
+                    <option>B.Tech. CSE</option>
+                    <option>B.Tech. AI&DS</option>
+                    <option>B.Tech. Civil</option>
+                </select>
+            </div>
+
+            <button class="btn btn-dark" onclick="showData()">
+                Submit
+            </button>
+
+        </div>
+
+        <!-- Output -->
+        <div class="col-md-6 display-box">
+
+            <p><strong>Name:</strong> <span id="showName"></span></p>
+
+            <p><strong>Email:</strong> <span id="showEmail"></span></p>
+
+            <p><strong>DOB:</strong> <span id="showDob"></span></p>
+
+            <p><strong>Course:</strong> <span id="showCourse"></span></p>
+
+            <p><strong>Branch:</strong> <span id="showBranch"></span></p>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+function showData(){
+
+    document.getElementById("showName").innerHTML =
+    document.getElementById("name").value;
+
+    document.getElementById("showEmail").innerHTML =
+    document.getElementById("email").value;
+
+    document.getElementById("showDob").innerHTML =
+    document.getElementById("dob").value;
+
+    document.getElementById("showCourse").innerHTML =
+    document.getElementById("course").value;
+
+    document.getElementById("showBranch").innerHTML =
+    document.getElementById("branch").value;
+}
+</script>
+
+</body>
+</html>
